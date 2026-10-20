@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/app.min.js" defer></script>
+</head>
+<body>
+
+    <main class="contenedor">
+        
+        <header>
+            <img
+                src="img/logo.svg"
+                alt="Logotipo del Gestor de Tareas"
+                class="logo"
+                width="75"
+                height="75"
+            >
+            <h1>Gestor de Tareas</h1>
+            <p>Organiza tus actividades de manera sencilla.</p>
+        </header>
+
+        <section class="panel">
+            <h2>Mis tareas</h2>
+
+            <form id="form-tarea">
+                <input
+                    type="text"
+                    id="nueva-tarea"
+                    placeholder="Escribe una nueva tarea..."
+                    maxlength="100"
+                    required
+                >
+                <button type="submit">Agregar tarea</button>
+            </form>
+
+            <div class="estadisticas">
+                <p>Total: <span id="total-tareas">0</span></p>
+                <p>Pendientes: <span id="pendientes">0</span></p>
+                <p>Completadas: <span id="completadas">0</span></p>
+            </div>
+
+            <div class="filtros">
+                <button class="filtro activo" data-filtro="todas">
+                    Todas
+                </button>
+                <button class="filtro" data-filtro="pendientes">
+                    Pendientes
+                </button>
+                <button class="filtro" data-filtro="completadas">
+                    Completadas
+                </button>
+            </div>
+
+            <ul id="lista-tareas"></ul>
+
+            <p id="mensaje-vacio">
+                Todavía no hay tareas para mostrar.
+            </p>
+        </section>
+
+        <footer>
+            <p>Proyecto académico - UVEG 2026</p>
+        </footer>
+    </main>
+
+</body>
+</html>
