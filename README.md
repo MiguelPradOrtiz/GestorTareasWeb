@@ -1,36 +1,42 @@
-# Gestor de Tareas Web
+## Configuración del servidor Apache
 
-Aplicación web desarrollada como parte del Reto 2 del módulo
-Despliegue de aplicaciones web y móviles de la UVEG.
+Para el despliegue se utilizó Apache mediante XAMPP.
 
-## Descripción
+La aplicación de producción se encuentra en:
 
-Gestor de tareas personales que permite organizar actividades
-mediante una interfaz sencilla y adaptable.
+C:\xampp\htdocs\GestorTareasWeb_Produccion
 
-## Funcionalidades
+Se configuró un Virtual Host con los siguientes datos:
+
+- Dominio local: gestortareas.local
+- Puerto: 80
+- Servidor: Apache
+- Directorio raíz: GestorTareasWeb_Produccion
+
+También se modificó el archivo hosts de Windows para
+asociar el dominio gestortareas.local con 127.0.0.1.
+
+## Empaquetado
+
+Se preparó una versión optimizada que contiene:
+
+- index.html
+- css/style.min.css
+- js/app.min.js
+- img/logo.svg
+
+Los archivos se distribuyen en un paquete ZIP llamado
+GestorTareasWeb_v1.0.0.zip.
+
+## Pruebas realizadas
+
+Se verificó que la aplicación pudiera:
 
 - Agregar tareas.
 - Marcar tareas como completadas.
 - Eliminar tareas.
-- Filtrar tareas pendientes y completadas.
-- Guardar información utilizando localStorage.
+- Filtrar tareas por estado.
+- Conservar información mediante localStorage.
 
-## Tecnologías utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- Apache mediante XAMPP
-- Git y GitHub
-
-## Optimización
-
-El proyecto incluye archivos CSS y JavaScript minificados,
-además de un logotipo SVG optimizado.
-
-## Ejecución local
-
-1. Copiar el proyecto a la carpeta htdocs de XAMPP.
-2. Iniciar Apache desde XAMPP Control Panel.
-3. Abrir http://localhost/GestorTareasWeb/
+También se comprobó el acceso mediante el Virtual Host
+http://gestortareas.local/.
